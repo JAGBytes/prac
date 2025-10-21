@@ -31,10 +31,10 @@ public class ProxyController {
     public ResponseEntity<?> secuenceCollatz(@RequestParam Integer value) throws IOException{
         String res = "";
         if(aux%2==0){
-            res= HttpConnection("http://localhost:8080/math?value="+value);
+            res= HttpConnection("http://54.158.238.114:8080/math?value="+value);
             System.out.println("server1");
         }else{
-            res= HttpConnection("http://localhost:8080/math?value="+value);
+            res= HttpConnection("http://54.158.238.114:8080/math?value="+value);
             System.out.println("server2");   
         }
         this.aux+=1;
